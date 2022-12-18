@@ -1,0 +1,178 @@
+*{
+box-sizing: border-box;
+padding: 0; 
+margin: 0;
+
+
+background-color: #0f2537;
+}
+
+body{
+ font-family: 'raleway', sans-serif; /*fondo */
+}
+h1{
+    background-color:#20374c   ;
+    font-weight: 400; /*ancho de la letra*/
+    text-align:start; /*centrado*/
+    padding: 20px 0;  /**/
+    font-size: 40px; /*tamaño de 40px*/
+    color:#ffff;
+    padding-left: 3%;
+    font-family: Lato, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "S;
+}
+
+
+.galeria {
+display: grid;
+grid-template-columns: repeat(auto-fit,minmax(30%,1fr)); /*autofit es para que no se desborde ;1 fr es igual a una parte del espacio disponible*/
+width: 90%; /*ancho de todo el grid*/
+margin: auto; /*margen*/
+grid-gap: 50px; /*espacio de la celda*/
+padding: 40px 20px;
+ /*hidden; hace que el texto que sobresalga por encima del div no sea visible.*/
+}
+
+
+.galeria > a    {
+
+
+position: relative; /*posicion relativa"*/
+overflow: hidden;/*hidden; hace que el texto que sobresalga por encima del div no sea visible.*/
+box-shadow:0 0 0 1px #578167; /*hacer un tipo de sombra*/
+transition: transform 0.5s;
+border-radius: 0.5em;
+text-decoration: none;
+}
+
+
+
+.galeria img,video{
+width: 100%;
+vertical-align:top;
+height: 200px;
+object-fit: cover;
+border-radius: 0.7em;
+}
+
+
+.galeria a:hover{
+
+transform: scale(1.11);
+/*transform: rotate(10deg) scale(1.3);*/
+}
+
+
+.light-box{
+position: fixed;
+top:0;
+left: 0;
+height: 100vh;/*vh	1% de la altura de la ventana gráfica.*/
+background: rgba(0, 0, 0, .5);
+ width: 100%;
+z-index: 1000;   /*para que sobrepase todos los elementos*/
+display: flex; /*para que se acomoden como celdas*/
+justify-content: center;
+ align-items: center;
+ transition: transform 0.3s  ease-in-out;
+ transform: scale(0);
+}
+
+
+.light-box .imagen{
+
+width: 75vw;
+max-height: 70vh;
+
+}
+
+.next{    
+width: 3%;
+height: 4%;
+background: rgba(126, 125, 125, 0.5);
+border-radius: 0.5em;
+}
+
+.ic-next {
+
+width: 100%;
+height: 100%;
+background: rgba(197, 25, 25, 0.5);
+   border-radius: 0.5em;
+
+}
+
+.light-box:target{
+
+    transform: scale(1);
+}
+
+.close{
+display: block;
+position: absolute;
+top: 7%;
+right: 8%;
+background:rgba(255, 196, 0, 0.486);
+color: #ffffff;
+text-decoration: none;
+width: 3%;
+height: 6%;
+border-radius: 50%;
+text-align:center;
+line-height: 40px;
+
+}
+
+@media screen and (max-width:400px){
+    .close{
+top: 20px;
+right: 20px;
+    }
+    
+}
+
+
+figcaption{
+    color: #000000;
+text-decoration-color: #000000;
+    
+}
+
+footer{
+    color: rgb(255, 255, 255);
+    text-align: center;
+    background-color:#5cb85c;
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+    
+}
+
+
+.btn_v{
+    background-color: #d9534f;
+    border-radius: 5px;
+    padding: 10px 7px;
+    text-decoration: none;
+    color: #fff;
+
+    margin: 5px;
+}
+.btn_ir{
+    background-color: #4c9be8;
+    border-radius: 5px;
+    padding: 10px 7px;
+    text-decoration: none;
+    color: #ffff;
+
+    margin: 5px;
+}
+figcaption{
+
+    background-color: #4e5d6c;
+    border-radius: 5px;
+    padding: 10px 7px;
+    text-decoration: none;
+    color: #fff;
+    margin: 5px;
+    
+}
