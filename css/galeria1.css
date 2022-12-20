@@ -1,19 +1,19 @@
-*{
+/* *{
 box-sizing: border-box;
 padding: 0; 
 margin: 0;
 
 
 background-color: #0f2537;
-}
+} */
 
 body{
  font-family: 'raleway', sans-serif; /*fondo */
-}
+} *
 h1{
     background-color:#20374c   ;
     font-weight: 400; /*ancho de la letra*/
-    text-align:start; /*centrado*/
+    text-align:center; /*centrado*/
     padding: 20px 0;  /**/
     font-size: 40px; /*tamaño de 40px*/
     color:#ffff;
